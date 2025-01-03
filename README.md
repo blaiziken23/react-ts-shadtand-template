@@ -52,70 +52,17 @@ react-ts-shadtand-template/
 
 ---
 
-## Usage
+## Included ShadCN Components
 
-### Components
-The template uses **ShadCN** components, which are modular and styled to maintain a consistent UI.
+This template comes with the following ShadCN components pre-installed and ready to use:
 
-- Place reusable components in the `src/components` folder.
-- Example of using a ShadCN button component:
-  ```tsx
-  import { Button } from "@shadcn/ui";
-
-  const App = () => {
-    return <Button>Click Me</Button>;
-  };
-
-  export default App;
-  ```
-
-### State Management
-**Zustand** is used for state management. Define your stores in `src/stores`.
-
-- Example of creating a store:
-  ```tsx
-  import create from "zustand";
-
-  interface CounterState {
-    count: number;
-    increment: () => void;
-  }
-
-  const useCounterStore = create<CounterState>((set) => ({
-    count: 0,
-    increment: () => set((state) => ({ count: state.count + 1 })),
-  }));
-
-  export default useCounterStore;
-  ```
-
-- Example of using a store in a component:
-  ```tsx
-  import useCounterStore from "../stores/counterStore";
-
-  const Counter = () => {
-    const { count, increment } = useCounterStore();
-
-    return (
-      <div>
-        <p>Count: {count}</p>
-        <button onClick={increment}>Increment</button>
-      </div>
-    );
-  };
-
-  export default Counter;
-  ```
-
----
-
-## Scripts
-
-- **`npm run dev`**: Start the development server.
-- **`npm run build`**: Build the app for production.
-- **`npm run preview`**: Preview the production build locally.
-- **`npm run lint`**: Lint the codebase.
-- **`npm run format`**: Format the code using Prettier.
+- **Button**: A styled button component for various use cases.
+- **Card**: A flexible container for grouping content.
+- **Input**: A customizable input field for forms.
+- **Textarea**: A multi-line text input field.
+- **Alert**: A component for displaying important messages.
+- **Badge**: A small, inline block element to display status or counts.
+- **Form**: A wrapper for handling form elements with ease.
 
 ---
 
@@ -124,14 +71,5 @@ The template uses **ShadCN** components, which are modular and styled to maintai
 1. **Add New ShadCN Components:**
    Install additional ShadCN components if needed:
    ```bash
-   npm install @shadcn/<component>
+   npx shadcn@latest add <component>
    ```
-
-2. **Configure Zustand Middleware:**
-   Enhance your Zustand stores with middleware like devtools or persistence.
-   ```bash
-   npm install zustand-middleware
-   ```
-
-3. **Extend Vite Config:**
-   Modify `vite.config.ts` to include plugins or adjust build settings as needed.
