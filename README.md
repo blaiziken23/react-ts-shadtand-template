@@ -1,4 +1,4 @@
-# React-TS-ShadZustand-Template
+# React-TS-Shadtand-Template
 
 This is a comprehensive starter template for building React applications with Vite, TypeScript, ShadCN, and Zustand.
 
@@ -40,7 +40,6 @@ react-ts-shadtand-template/
 ├── src/
 │   ├── components/       # Reusable UI components (ShadCN)
 │   ├── stores/           # Zustand stores
-│   ├── routes/           # Application routes
 │   ├── assets/           # Static assets (images, fonts, etc.)
 │   ├── styles/           # Global and component-specific styles
 │   └── main.tsx          # Application entry point
